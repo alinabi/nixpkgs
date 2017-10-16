@@ -4,13 +4,13 @@ let
   python = python2;
 in stdenv.mkDerivation rec {
   name = "z3-${version}";
-  version = "4.5.0";
+  version = "01f642a6f37e2a25cbfe45f0c48aa9341989028d";
 
   src = fetchFromGitHub {
     owner  = "Z3Prover";
     repo   = "z3";
-    rev    = "z3-${version}";
-    sha256 = "0ssp190ksak93hiz61z90x6hy9hcw1ywp8b2dzmbhn6fbd4bnxzp";
+    rev    = "${version}";
+    sha256 = "0avs09x4is4pmz6i5cxrmip2d9fz8nv5pvbwppdcivc6by0lp333";
   };
 
   buildInputs = [ python fixDarwinDylibNames ];
